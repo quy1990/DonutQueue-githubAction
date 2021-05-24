@@ -1,0 +1,24 @@
+version: "3.7"
+services:
+  database:
+    image: "mysql:8.0"
+    restart: always
+    cap_add:
+      - SYS_NICE  # CAP_SYS_NICE
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_DATABASE: atrify
+      MYSQL_USER: atrify
+      MYSQL_PASSWORD: toor
+      MYSQL_ROOT_PASSWORD: toor
+  phpmyadmin:
+    depends_on:
+      - database
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    ports:
+      - '8081:80'
+    environment:
+      PMA_HOST: database
+      MYSQL_ROOT_PASSWORD: toor
