@@ -1,7 +1,7 @@
 package com.atrify.donutQueue.controllers.v1;
 
 
-import com.atrify.donutQueue.dataTranferObjects.Bag;
+import com.atrify.donutQueue.dataTranferObjects.BagDTO;
 import com.atrify.donutQueue.exceptions.BagNotFoundException;
 import com.atrify.donutQueue.services.Bag.BagService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,13 +30,13 @@ public class BagV1Controller {
      * get all bags in System is used by Manager
      */
     @GetMapping
-    public ResponseEntity<List<Bag>> index() {
+    public ResponseEntity<List<BagDTO>> index() {
         try {
-            return new ResponseEntity<List<Bag>>(bagServiceJava.getBags(), HttpStatus.OK);
+            return new ResponseEntity<List<BagDTO>>(bagServiceJava.getBags(), HttpStatus.OK);
         } catch (BagNotFoundException exception) {
-            return new ResponseEntity<List<Bag>>(HttpStatus.NOT_FOUND);
+            return new ResponseEntity<List<BagDTO>>(HttpStatus.NOT_FOUND);
         } catch (Exception exception) {
-            return new ResponseEntity<List<Bag>>(HttpStatus.EXPECTATION_FAILED);
+            return new ResponseEntity<List<BagDTO>>(HttpStatus.EXPECTATION_FAILED);
         }
     }
 
@@ -44,13 +44,13 @@ public class BagV1Controller {
      * get first bag in Queue and can be used by jim
      */
     @GetMapping("/first")
-    public ResponseEntity<Bag> getFirst() {
+    public ResponseEntity<BagDTO> getFirst() {
         try {
-            return new ResponseEntity<Bag>(bagServiceJava.getBag(0), HttpStatus.OK);
+            return new ResponseEntity<BagDTO>(bagServiceJava.getBag(0), HttpStatus.OK);
         } catch (BagNotFoundException exception) {
-            return new ResponseEntity<Bag>(HttpStatus.NOT_FOUND);
+            return new ResponseEntity<BagDTO>(HttpStatus.NOT_FOUND);
         } catch (Exception exception) {
-            return new ResponseEntity<Bag>(HttpStatus.EXPECTATION_FAILED);
+            return new ResponseEntity<BagDTO>(HttpStatus.EXPECTATION_FAILED);
         }
     }
 }

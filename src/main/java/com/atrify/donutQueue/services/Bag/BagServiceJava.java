@@ -1,6 +1,6 @@
 package com.atrify.donutQueue.services.Bag;
 
-import com.atrify.donutQueue.dataTranferObjects.Bag;
+import com.atrify.donutQueue.dataTranferObjects.BagDTO;
 import com.atrify.donutQueue.entities.Order;
 import com.atrify.donutQueue.services.Order.OrderComparator;
 import org.springframework.context.annotation.Primary;
@@ -17,7 +17,7 @@ import java.util.*;
 public class BagServiceJava extends BagServiceImpl {
 
     @Override
-    public List<Bag> getBags() {
+    public List<BagDTO> getBags() {
         Queue<Order> orders = getOrdersSortByPriorityNumberAndSortByCreateDateInJava();
         List<Order> result = new ArrayList<>(orders.size());
         while (!orders.isEmpty()) {

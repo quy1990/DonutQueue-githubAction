@@ -5,7 +5,7 @@ import com.atrify.donutQueue.entities.Order;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Bag {
+public class BagDTO {
 
     public static int PRIORITY_NUMBER = 1000;
     int indexOfBag;
@@ -13,11 +13,11 @@ public class Bag {
     int time_to_process = 5; // 5 Minutes
     List<Order> orders = new ArrayList<>();
 
-    public Bag() {
+    public BagDTO() {
         indexOfBag = 1;
     }
 
-    public Bag(Order order) {
+    public BagDTO(Order order) {
         if (canAdd(order)) {
             orders.add(order);
         }
