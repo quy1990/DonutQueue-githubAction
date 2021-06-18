@@ -1,12 +1,12 @@
-package com.atrify.donutQueue.controllers;
+package com.atrify.donutQueue.controllers.v1;
 
 import com.atrify.donutQueue.dataTranferObjects.OrderDTO;
 import com.atrify.donutQueue.entities.Order;
 import com.atrify.donutQueue.exceptions.ClientNotFoundException;
 import com.atrify.donutQueue.exceptions.OrderExistedException;
 import com.atrify.donutQueue.exceptions.OrderNotFoundException;
-import com.atrify.donutQueue.services.Bag.BagService;
-import com.atrify.donutQueue.services.Order.OrderService;
+import com.atrify.donutQueue.services.BagServices.BagService;
+import com.atrify.donutQueue.services.OrderServices.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

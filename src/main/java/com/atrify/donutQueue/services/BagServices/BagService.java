@@ -1,4 +1,4 @@
-package com.atrify.donutQueue.services.Bag;
+package com.atrify.donutQueue.services.BagServices;
 
 import com.atrify.donutQueue.dataTranferObjects.BagDTO;
 import com.atrify.donutQueue.dataTranferObjects.OrderDTO;

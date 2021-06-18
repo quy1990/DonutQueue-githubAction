@@ -1,8 +1,8 @@
-package com.atrify.donutQueue.services.Bag;
+package com.atrify.donutQueue.services.BagServices;
 
 import com.atrify.donutQueue.entities.Order;
 import com.atrify.donutQueue.repositories.OrderRepository;
-import com.atrify.donutQueue.services.Order.OrderService;
+import com.atrify.donutQueue.services.OrderServices.OrderService;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;

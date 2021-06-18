@@ -2,7 +2,7 @@ package com.atrify.donutQueue.unitTest;
 
 import com.atrify.donutQueue.entities.Order;
 import com.atrify.donutQueue.repositories.OrderRepository;
-import com.atrify.donutQueue.services.Bag.BagService;
+import com.atrify.donutQueue.services.BagServices.BagService;
 import org.junit.After;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

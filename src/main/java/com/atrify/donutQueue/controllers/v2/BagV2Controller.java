@@ -3,7 +3,7 @@ package com.atrify.donutQueue.controllers.v2;
 
 import com.atrify.donutQueue.dataTranferObjects.BagDTO;
 import com.atrify.donutQueue.exceptions.BagNotFoundException;
-import com.atrify.donutQueue.services.Bag.BagService;
+import com.atrify.donutQueue.services.BagServices.BagService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;

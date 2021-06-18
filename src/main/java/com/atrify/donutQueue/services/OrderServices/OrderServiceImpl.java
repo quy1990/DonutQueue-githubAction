@@ -1,4 +1,4 @@
-package com.atrify.donutQueue.services.Order;
+package com.atrify.donutQueue.services.OrderServices;
 
 import com.atrify.donutQueue.entities.Order;
 import com.atrify.donutQueue.exceptions.OrderExistedException;

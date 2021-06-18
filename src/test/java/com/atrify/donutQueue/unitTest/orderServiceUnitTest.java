@@ -3,7 +3,7 @@ package com.atrify.donutQueue.unitTest;
 import com.atrify.donutQueue.entities.Order;
 import com.atrify.donutQueue.exceptions.OrderExistedException;
 import com.atrify.donutQueue.repositories.OrderRepository;
-import com.atrify.donutQueue.services.Order.OrderService;
+import com.atrify.donutQueue.services.OrderServices.OrderService;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
